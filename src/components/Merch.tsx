@@ -1,4 +1,4 @@
-import { ShoppingBag, Shirt, Coffee, Sticker, Sparkles } from 'lucide-react';
+import { ShoppingBag, Shirt, Coffee, Sticker, Sparkles, BrainCircuit, ShieldAlert, MessageCircle } from 'lucide-react';
 
 const products = [
   {
@@ -48,6 +48,30 @@ const products = [
     icon: Shirt,
     description: "Technically accurate until the robots learn sarcasm.",
     gradient: "from-gray-600 to-gray-800",
+  },
+  {
+    name: "Actual Intelligence",
+    type: "Premium T-Shirt",
+    price: "$29.99",
+    icon: BrainCircuit,
+    description: "Real human brain power. No hallucinations. No training data. Just good old-fashioned grey matter.",
+    gradient: "from-cyan-600 to-blue-600",
+  },
+  {
+    name: "Scammed by Deepfake",
+    type: "Classic T-Shirt",
+    price: "$24.99",
+    icon: ShieldAlert,
+    description: "I got fooled by a video that wasn't real. My bank account cried. The AI laughed.",
+    gradient: "from-rose-600 to-pink-600",
+  },
+  {
+    name: "Chatbot Stole My Child",
+    type: "Coffee Mug",
+    price: "$16.99",
+    icon: MessageCircle,
+    description: "My kid talks to a bot more than me. At least the bot doesn't ask them to clean their room.",
+    gradient: "from-violet-600 to-purple-600",
   },
 ];
 
