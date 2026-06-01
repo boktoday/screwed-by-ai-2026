@@ -6,7 +6,7 @@ const products = [
   {
     name: "I Got Screwed By AI",
     type: "Classic T-Shirt",
-    price: "$24.99",
+    price: "$29.99+",
     mockup: "i-got-screwed-tshirt.png",
     description: "Wear your unemployment with pride. 100% cotton, 0% job security.",
     printfulId: 436110827,
@@ -14,7 +14,7 @@ const products = [
   {
     name: "My Job Was Automated",
     type: "Coffee Mug",
-    price: "$16.99",
+    price: "$24.99+",
     mockup: "job-automated-mug.png",
     description: "Perfect for crying into while browsing LinkedIn at 3 AM.",
     printfulId: 436110925,
@@ -30,7 +30,7 @@ const products = [
   {
     name: "Prompt Engineer Survivor",
     type: "Premium Hoodie",
-    price: "$49.99",
+    price: "$59.99+",
     mockup: "prompt-survivor-hoodie.png",
     description: "For those who adapted. The ultimate sellout merch.",
     printfulId: 436110843,
@@ -38,7 +38,7 @@ const products = [
   {
     name: "AI Made This Design",
     type: "Ironic T-Shirt",
-    price: "$24.99",
+    price: "$29.99+",
     mockup: "ai-made-design-tshirt.png",
     description: "Meta-commentary on your existential crisis. Very 2024.",
     printfulId: 436110836,
@@ -54,7 +54,7 @@ const products = [
   {
     name: "Actual Intelligence",
     type: "Premium T-Shirt",
-    price: "$29.99",
+    price: "$34.99+",
     mockup: "actual-intelligence-tshirt.png",
     description: "Real human brain power. No hallucinations. No training data. Just good old-fashioned grey matter.",
     printfulId: 436110834,
@@ -62,7 +62,7 @@ const products = [
   {
     name: "Scammed by Deepfake",
     type: "Classic T-Shirt",
-    price: "$24.99",
+    price: "$29.99+",
     mockup: "scammed-deepfake-tshirt.png",
     description: "I got fooled by a video that wasn't real. My bank account cried. The AI laughed.",
     printfulId: 436110831,
@@ -70,7 +70,7 @@ const products = [
   {
     name: "Chatbot Stole My Child",
     type: "Coffee Mug",
-    price: "$16.99",
+    price: "$24.99+",
     mockup: "chatbot-stole-child-mug.png",
     description: "My kid talks to a bot more than me. At least the bot doesn't ask them to clean their room.",
     printfulId: 436110929,
@@ -78,7 +78,7 @@ const products = [
   {
     name: "I Have AI Psychosis",
     type: "Classic T-Shirt",
-    price: "$24.99",
+    price: "$29.99+",
     mockup: "ai-psychosis-tshirt.png",
     description: "I see algorithms everywhere. The walls are made of training data. The birds aren't real.",
     printfulId: 436110829,
@@ -86,7 +86,7 @@ const products = [
   {
     name: "AI Data Center Control Grid",
     type: "Premium Hoodie",
-    price: "$49.99",
+    price: "$59.99+",
     mockup: "data-center-hoodie.png",
     description: "Powered by enough electricity to fry a small country.",
     printfulId: 436110845,
@@ -94,7 +94,7 @@ const products = [
   {
     name: "AI Algorithmic Angst",
     type: "Coffee Mug",
-    price: "$16.99",
+    price: "$24.99+",
     mockup: "algorithmic-angst-mug.png",
     description: "The algorithm decided I should see this. The algorithm decides my mood.",
     printfulId: 436110937,
