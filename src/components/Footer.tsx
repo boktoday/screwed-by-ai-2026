@@ -1,4 +1,4 @@
-import { Twitter, Facebook, Share2, Bot, Heart, ExternalLink } from 'lucide-react';
+import { Twitter, Facebook, Share2, Bot, Heart } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -45,23 +45,25 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-white font-bold mb-4 font-heading">Resources</h4>
+            <h4 className="text-white font-bold mb-4 font-heading">Issue Briefs</h4>
             <ul className="space-y-2">
               {[
-                { label: 'AI Orchestrator', href: 'https://aiorchestrator.com.au' },
-                { label: 'AI Champion', href: 'https://aichampion.com.au' },
-                { label: 'AI Literacy', href: 'https://ailiteracy.com.au' },
-                { label: 'Lead With AI', href: 'https://you.leadwithai.com.au' },
+                { label: 'AI Data Centres', href: '/datacentres' },
+                { label: 'Scammed by Deepfake', href: '/deepfakes' },
+                { label: 'Chatbot Stole My Child', href: '/chatbots' },
+                { label: 'My Job Was Automated', href: '/jobs' },
+                { label: 'AI Psychosis', href: '/ai-psychosis' },
+                { label: 'Algorithmic Angst', href: '/algorithms' },
+                { label: 'Actual Intelligence', href: '/actual-intelligence' },
+                { label: 'AI Made This Design', href: '/copyright' },
+                { label: 'Designed to Hook You', href: '/engage-attach' },
               ].map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-gray-500 hover:text-gray-300 transition-colors inline-flex items-center gap-1"
+                    className="text-sm text-gray-500 hover:text-gray-300 transition-colors"
                   >
                     {link.label}
-                    <ExternalLink className="w-3 h-3" />
                   </a>
                 </li>
               ))}
