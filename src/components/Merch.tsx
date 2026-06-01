@@ -1,4 +1,4 @@
-import { ShoppingBag, Shirt, Coffee, Sticker, Sparkles, BrainCircuit, ShieldAlert, MessageCircle } from 'lucide-react';
+import { ShoppingBag, Shirt, Coffee, Sticker, Sparkles, BrainCircuit, ShieldAlert, MessageCircle, Brain, Server, Zap } from 'lucide-react';
 
 const products = [
   {
@@ -72,6 +72,30 @@ const products = [
     icon: MessageCircle,
     description: "My kid talks to a bot more than me. At least the bot doesn't ask them to clean their room.",
     gradient: "from-violet-600 to-purple-600",
+  },
+  {
+    name: "I Have AI Psychosis",
+    type: "Classic T-Shirt",
+    price: "$24.99",
+    icon: Brain,
+    description: "I see algorithms everywhere. The walls are made of training data. The birds aren't real — they're drones running inference.",
+    gradient: "from-fuchsia-600 to-purple-600",
+  },
+  {
+    name: "AI Data Center Control Grid",
+    type: "Premium Hoodie",
+    price: "$49.99",
+    icon: Server,
+    description: "Powered by enough electricity to fry a small country. My opinions are processed in a warehouse in Iowa.",
+    gradient: "from-emerald-600 to-teal-600",
+  },
+  {
+    name: "AI Algorithmic Angst",
+    type: "Coffee Mug",
+    price: "$16.99",
+    icon: Zap,
+    description: "The algorithm decided I should see this. The algorithm decides my mood. The algorithm is my therapist now.",
+    gradient: "from-amber-600 to-yellow-600",
   },
 ];
 
