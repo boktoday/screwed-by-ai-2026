@@ -11,6 +11,7 @@ import Algorithms from './pages/Algorithms.tsx';
 import ActualIntelligence from './pages/ActualIntelligence.tsx';
 import Copyright from './pages/Copyright.tsx';
 import Engagement from './pages/Engagement.tsx';
+import Legal from './pages/Legal.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -27,6 +28,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/actual-intelligence" element={<ActualIntelligence />} />
         <Route path="/copyright" element={<Copyright />} />
         <Route path="/engage-attach" element={<Engagement />} />
+        <Route path="/legal" element={<Legal />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

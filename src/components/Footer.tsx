@@ -29,7 +29,7 @@ export default function Footer() {
                 { label: 'Horror Stories', href: '#stories' },
                 { label: 'Submit Story', href: '#submit' },
                 { label: 'Newsletter', href: '#newsletter' },
-                { label: 'Merch', href: '#merch' },
+                { label: 'Legal', href: '/legal' },
               ].map((link) => (
                 <li key={link.label}>
                   <a
