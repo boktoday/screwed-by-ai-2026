@@ -1,114 +1,102 @@
-import { ShoppingBag, Shirt, Coffee, Sticker, Sparkles, BrainCircuit, ShieldAlert, MessageCircle, Brain, Server, Zap, ExternalLink } from 'lucide-react';
+import { ShoppingBag, Sparkles, ExternalLink } from 'lucide-react';
 
-const STORE_BASE = "https://screwed-by-ai.printful.com/products";
+const MOCKUP_BASE = "/designs/mockups";
 
 const products = [
   {
     name: "I Got Screwed By AI",
     type: "Classic T-Shirt",
     price: "$24.99",
-    icon: Shirt,
+    mockup: "i-got-screwed-tshirt.png",
     description: "Wear your unemployment with pride. 100% cotton, 0% job security.",
-    gradient: "from-red-600 to-orange-600",
     printfulId: 436110827,
   },
   {
     name: "My Job Was Automated",
     type: "Coffee Mug",
     price: "$16.99",
-    icon: Coffee,
+    mockup: "job-automated-mug.png",
     description: "Perfect for crying into while browsing LinkedIn at 3 AM.",
-    gradient: "from-blue-600 to-purple-600",
     printfulId: 436110925,
   },
   {
     name: "ChatGPT Took My Job",
     type: "Laptop Sticker",
     price: "$4.99",
-    icon: Sticker,
+    mockup: null,
     description: "Ironically place it on the device that replaced you. Poetic.",
-    gradient: "from-green-600 to-teal-600",
     printfulId: null,
   },
   {
     name: "Prompt Engineer Survivor",
     type: "Premium Hoodie",
     price: "$49.99",
-    icon: Shirt,
+    mockup: "prompt-survivor-hoodie.png",
     description: "For those who adapted. The ultimate sellout merch.",
-    gradient: "from-yellow-600 to-red-600",
     printfulId: 436110843,
   },
   {
     name: "AI Made This Design",
     type: "Ironic T-Shirt",
     price: "$24.99",
-    icon: Shirt,
+    mockup: "ai-made-design-tshirt.png",
     description: "Meta-commentary on your existential crisis. Very 2024.",
-    gradient: "from-pink-600 to-purple-600",
     printfulId: 436110836,
   },
   {
     name: "Still Human (For Now)",
     type: "Trucker Hat",
     price: "$19.99",
-    icon: Shirt,
+    mockup: null,
     description: "Technically accurate until the robots learn sarcasm.",
-    gradient: "from-gray-600 to-gray-800",
     printfulId: null,
   },
   {
     name: "Actual Intelligence",
     type: "Premium T-Shirt",
     price: "$29.99",
-    icon: BrainCircuit,
+    mockup: "actual-intelligence-tshirt.png",
     description: "Real human brain power. No hallucinations. No training data. Just good old-fashioned grey matter.",
-    gradient: "from-cyan-600 to-blue-600",
     printfulId: 436110834,
   },
   {
     name: "Scammed by Deepfake",
     type: "Classic T-Shirt",
     price: "$24.99",
-    icon: ShieldAlert,
+    mockup: "scammed-deepfake-tshirt.png",
     description: "I got fooled by a video that wasn't real. My bank account cried. The AI laughed.",
-    gradient: "from-rose-600 to-pink-600",
     printfulId: 436110831,
   },
   {
     name: "Chatbot Stole My Child",
     type: "Coffee Mug",
     price: "$16.99",
-    icon: MessageCircle,
+    mockup: "chatbot-stole-child-mug.png",
     description: "My kid talks to a bot more than me. At least the bot doesn't ask them to clean their room.",
-    gradient: "from-violet-600 to-purple-600",
     printfulId: 436110929,
   },
   {
     name: "I Have AI Psychosis",
     type: "Classic T-Shirt",
     price: "$24.99",
-    icon: Brain,
-    description: "I see algorithms everywhere. The walls are made of training data. The birds aren't real — they're drones running inference.",
-    gradient: "from-fuchsia-600 to-purple-600",
+    mockup: "ai-psychosis-tshirt.png",
+    description: "I see algorithms everywhere. The walls are made of training data. The birds aren't real.",
     printfulId: 436110829,
   },
   {
     name: "AI Data Center Control Grid",
     type: "Premium Hoodie",
     price: "$49.99",
-    icon: Server,
-    description: "Powered by enough electricity to fry a small country. My opinions are processed in a warehouse in Iowa.",
-    gradient: "from-emerald-600 to-teal-600",
+    mockup: "data-center-hoodie.png",
+    description: "Powered by enough electricity to fry a small country.",
     printfulId: 436110845,
   },
   {
     name: "AI Algorithmic Angst",
     type: "Coffee Mug",
     price: "$16.99",
-    icon: Zap,
-    description: "The algorithm decided I should see this. The algorithm decides my mood. The algorithm is my therapist now.",
-    gradient: "from-amber-600 to-yellow-600",
+    mockup: "algorithmic-angst-mug.png",
+    description: "The algorithm decided I should see this. The algorithm decides my mood.",
     printfulId: 436110937,
   },
 ];
@@ -120,7 +108,6 @@ export default function Merch() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[1px] bg-gradient-to-r from-transparent via-red-500/20 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 glass text-sm text-gray-400 rounded-full mb-6">
             <Sparkles className="w-4 h-4 text-gold-400" />
@@ -137,26 +124,33 @@ export default function Merch() {
           </p>
         </div>
 
-        {/* Products grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, index) => {
-            const Icon = product.icon;
-            const storeUrl = product.printfulId ? `${STORE_BASE}/${product.printfulId}` : null;
+            const storeUrl = product.printfulId ? `https://screwed-by-ai.printful.com/products/${product.printfulId}` : null;
+            const mockupSrc = product.mockup ? `${MOCKUP_BASE}/${product.mockup}` : null;
 
             return (
               <div
                 key={index}
                 className="group relative rounded-2xl border border-white/5 hover:border-white/20 bg-white/[0.02] transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 overflow-hidden"
               >
-                {/* Product image area */}
-                <div className={`relative h-48 bg-gradient-to-br ${product.gradient} flex items-center justify-center overflow-hidden`}>
-                  <Icon className="w-24 h-24 text-white/20 group-hover:scale-110 group-hover:text-white/30 transition-all duration-500" />
-
-                  {/* Shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                {/* Mockup image */}
+                <div className="relative h-48 bg-[#0a0a0a] flex items-center justify-center overflow-hidden">
+                  {mockupSrc ? (
+                    <img
+                      src={mockupSrc}
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading={index < 3 ? "eager" : "lazy"}
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                      <ShoppingBag className="w-16 h-16 text-gray-600" />
+                    </div>
+                  )}
 
                   {/* Price tag */}
-                  <div className="absolute top-4 right-4 px-3 py-1.5 bg-black/60 backdrop-blur-sm border border-white/10 rounded-lg text-sm font-bold text-white">
+                  <div className="absolute top-3 right-3 px-3 py-1.5 bg-black/70 backdrop-blur-sm border border-white/10 rounded-lg text-sm font-bold text-white">
                     {product.price}
                   </div>
                 </div>
@@ -184,7 +178,7 @@ export default function Merch() {
                       <ExternalLink className="w-3 h-3" />
                     </a>
                   ) : (
-                    <button className="w-full py-3 bg-white/5 border border-white/10 rounded-xl text-sm font-semibold text-gray-500 hover:bg-white/10 hover:border-gold-500/30 hover:text-gray-300 transition-all duration-300 cursor-default">
+                    <button className="w-full py-3 bg-white/5 border border-white/10 rounded-xl text-sm font-semibold text-gray-500 cursor-default">
                       Coming Soon
                     </button>
                   )}
