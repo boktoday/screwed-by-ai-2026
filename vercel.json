@@ -4,6 +4,7 @@
     { "source": "/datacentres", "destination": "/index.html" },
     { "source": "/deepfakes", "destination": "/index.html" },
     { "source": "/chatbots", "destination": "/index.html" },
-    { "source": "/jobs", "destination": "/index.html" }
+    { "source": "/jobs", "destination": "/index.html" },
+    { "source": "/ai-psychosis", "destination": "/index.html" }
   ]
 }
