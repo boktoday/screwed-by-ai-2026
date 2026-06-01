@@ -3,6 +3,7 @@
     { "source": "/a", "destination": "/index.html" },
     { "source": "/datacentres", "destination": "/index.html" },
     { "source": "/deepfakes", "destination": "/index.html" },
-    { "source": "/chatbots", "destination": "/index.html" }
+    { "source": "/chatbots", "destination": "/index.html" },
+    { "source": "/jobs", "destination": "/index.html" }
   ]
 }
