@@ -10,6 +10,7 @@ import AIPsychosis from './pages/AIPsychosis.tsx';
 import Algorithms from './pages/Algorithms.tsx';
 import ActualIntelligence from './pages/ActualIntelligence.tsx';
 import Copyright from './pages/Copyright.tsx';
+import Engagement from './pages/Engagement.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/algorithms" element={<Algorithms />} />
         <Route path="/actual-intelligence" element={<ActualIntelligence />} />
         <Route path="/copyright" element={<Copyright />} />
+        <Route path="/engagement" element={<Engagement />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

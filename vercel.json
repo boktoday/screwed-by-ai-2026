@@ -8,6 +8,7 @@
     { "source": "/ai-psychosis", "destination": "/index.html" },
     { "source": "/algorithms", "destination": "/index.html" },
     { "source": "/actual-intelligence", "destination": "/index.html" },
-    { "source": "/copyright", "destination": "/index.html" }
+    { "source": "/copyright", "destination": "/index.html" },
+    { "source": "/engagement", "destination": "/index.html" }
   ]
 }
