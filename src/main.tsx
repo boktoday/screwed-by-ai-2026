@@ -9,6 +9,7 @@ import Jobs from './pages/Jobs.tsx';
 import AIPsychosis from './pages/AIPsychosis.tsx';
 import Algorithms from './pages/Algorithms.tsx';
 import ActualIntelligence from './pages/ActualIntelligence.tsx';
+import Copyright from './pages/Copyright.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/ai-psychosis" element={<AIPsychosis />} />
         <Route path="/algorithms" element={<Algorithms />} />
         <Route path="/actual-intelligence" element={<ActualIntelligence />} />
+        <Route path="/copyright" element={<Copyright />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
