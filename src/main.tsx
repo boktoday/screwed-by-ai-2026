@@ -7,6 +7,7 @@ import Deepfakes from './pages/Deepfakes.tsx';
 import Chatbots from './pages/Chatbots.tsx';
 import Jobs from './pages/Jobs.tsx';
 import AIPsychosis from './pages/AIPsychosis.tsx';
+import Algorithms from './pages/Algorithms.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/chatbots" element={<Chatbots />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/ai-psychosis" element={<AIPsychosis />} />
+        <Route path="/algorithms" element={<Algorithms />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
