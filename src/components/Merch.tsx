@@ -1,4 +1,6 @@
-import { ShoppingBag, Shirt, Coffee, Sticker, Sparkles, BrainCircuit, ShieldAlert, MessageCircle, Brain, Server, Zap } from 'lucide-react';
+import { ShoppingBag, Shirt, Coffee, Sticker, Sparkles, BrainCircuit, ShieldAlert, MessageCircle, Brain, Server, Zap, ExternalLink } from 'lucide-react';
+
+const STORE_BASE = "https://screwed-by-ai.printful.com/products";
 
 const products = [
   {
@@ -8,6 +10,7 @@ const products = [
     icon: Shirt,
     description: "Wear your unemployment with pride. 100% cotton, 0% job security.",
     gradient: "from-red-600 to-orange-600",
+    printfulId: 436110827,
   },
   {
     name: "My Job Was Automated",
@@ -16,6 +19,7 @@ const products = [
     icon: Coffee,
     description: "Perfect for crying into while browsing LinkedIn at 3 AM.",
     gradient: "from-blue-600 to-purple-600",
+    printfulId: 436110925,
   },
   {
     name: "ChatGPT Took My Job",
@@ -24,6 +28,7 @@ const products = [
     icon: Sticker,
     description: "Ironically place it on the device that replaced you. Poetic.",
     gradient: "from-green-600 to-teal-600",
+    printfulId: null,
   },
   {
     name: "Prompt Engineer Survivor",
@@ -32,6 +37,7 @@ const products = [
     icon: Shirt,
     description: "For those who adapted. The ultimate sellout merch.",
     gradient: "from-yellow-600 to-red-600",
+    printfulId: 436110843,
   },
   {
     name: "AI Made This Design",
@@ -40,6 +46,7 @@ const products = [
     icon: Shirt,
     description: "Meta-commentary on your existential crisis. Very 2024.",
     gradient: "from-pink-600 to-purple-600",
+    printfulId: 436110836,
   },
   {
     name: "Still Human (For Now)",
@@ -48,6 +55,7 @@ const products = [
     icon: Shirt,
     description: "Technically accurate until the robots learn sarcasm.",
     gradient: "from-gray-600 to-gray-800",
+    printfulId: null,
   },
   {
     name: "Actual Intelligence",
@@ -56,6 +64,7 @@ const products = [
     icon: BrainCircuit,
     description: "Real human brain power. No hallucinations. No training data. Just good old-fashioned grey matter.",
     gradient: "from-cyan-600 to-blue-600",
+    printfulId: 436110834,
   },
   {
     name: "Scammed by Deepfake",
@@ -64,6 +73,7 @@ const products = [
     icon: ShieldAlert,
     description: "I got fooled by a video that wasn't real. My bank account cried. The AI laughed.",
     gradient: "from-rose-600 to-pink-600",
+    printfulId: 436110831,
   },
   {
     name: "Chatbot Stole My Child",
@@ -72,6 +82,7 @@ const products = [
     icon: MessageCircle,
     description: "My kid talks to a bot more than me. At least the bot doesn't ask them to clean their room.",
     gradient: "from-violet-600 to-purple-600",
+    printfulId: 436110929,
   },
   {
     name: "I Have AI Psychosis",
@@ -80,6 +91,7 @@ const products = [
     icon: Brain,
     description: "I see algorithms everywhere. The walls are made of training data. The birds aren't real — they're drones running inference.",
     gradient: "from-fuchsia-600 to-purple-600",
+    printfulId: 436110829,
   },
   {
     name: "AI Data Center Control Grid",
@@ -88,6 +100,7 @@ const products = [
     icon: Server,
     description: "Powered by enough electricity to fry a small country. My opinions are processed in a warehouse in Iowa.",
     gradient: "from-emerald-600 to-teal-600",
+    printfulId: 436110845,
   },
   {
     name: "AI Algorithmic Angst",
@@ -96,12 +109,13 @@ const products = [
     icon: Zap,
     description: "The algorithm decided I should see this. The algorithm decides my mood. The algorithm is my therapist now.",
     gradient: "from-amber-600 to-yellow-600",
+    printfulId: 436110937,
   },
 ];
 
 export default function Merch() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section id="merch" className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-gray-900/30 to-[#0a0a0a]" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[1px] bg-gradient-to-r from-transparent via-red-500/20 to-transparent" />
 
@@ -127,6 +141,8 @@ export default function Merch() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, index) => {
             const Icon = product.icon;
+            const storeUrl = product.printfulId ? `${STORE_BASE}/${product.printfulId}` : null;
+
             return (
               <div
                 key={index}
@@ -156,9 +172,22 @@ export default function Merch() {
                   <p className="text-sm text-gray-400 leading-relaxed">
                     {product.description}
                   </p>
-                  <button className="w-full py-3 bg-white/5 border border-white/10 rounded-xl text-sm font-semibold text-gray-300 hover:bg-white/10 hover:border-gold-500/30 hover:text-white transition-all duration-300">
-                    Coming Soon
-                  </button>
+                  {storeUrl ? (
+                    <a
+                      href={storeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-gold-500/20 to-gold-600/20 border border-gold-500/30 rounded-xl text-sm font-semibold text-gold-400 hover:bg-gold-500/30 hover:border-gold-500/50 hover:text-gold-300 transition-all duration-300"
+                    >
+                      <ShoppingBag className="w-4 h-4" />
+                      Buy Now
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  ) : (
+                    <button className="w-full py-3 bg-white/5 border border-white/10 rounded-xl text-sm font-semibold text-gray-500 hover:bg-white/10 hover:border-gold-500/30 hover:text-gray-300 transition-all duration-300 cursor-default">
+                      Coming Soon
+                    </button>
+                  )}
                 </div>
               </div>
             );
